@@ -67,17 +67,42 @@ function App() {
   };
 
   return (
-    <Box sx={{ p: 4 }}>
-      <Typography variant="h4">Event Sync UI</Typography>
+    <Box sx={{ p: 4, mx: 5 }}>
+      <Typography
+        variant="h4"
+        sx={{ color: "teal", fontWeight: "bold", mb: 2 }}
+      >
+        Event Driven Synchronization
+      </Typography>
 
-      <Typography variant="h8">Tab ID: {tabId}</Typography>
+      <Typography variant="body2" sx={{ color: "text.secondary" }}>
+        Tab ID: {tabId}
+      </Typography>
 
       <TextField
+        sx={{
+          mt: 3,
+
+          "& .MuiInputLabel-root": {
+            color: "teal",
+          },
+
+          "& .MuiInputLabel-root.Mui-focused": {
+            color: "teal",
+            borderColor: "teal",
+            borderWidth: "3px",
+          },
+
+          "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
+            {
+              borderColor: "teal",
+              borderWidth: "3px",
+            },
+        }}
         fullWidth
         label="Type something"
         value={text}
         onChange={handleInputChange}
-        sx={{ mt: 3 }}
       />
 
       <Typography variant="h6" sx={{ mt: 4 }}>
