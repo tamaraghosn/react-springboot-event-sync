@@ -14,7 +14,7 @@ public class EventService {
 
     public void processTextEvent(String tabId, String text){
         String random = UUID.randomUUID().toString().substring(0,5);
-        String result = text + "--" + random;
+        String result = text + "-" + random;
         labelStore.put(tabId, result);
     }
 
