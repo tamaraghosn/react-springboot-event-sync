@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { TextField, Typography, Box } from "@mui/material";
+import { TextField, Typography, Box, Card } from "@mui/material";
 import axios from "axios";
 
 function App() {
@@ -75,10 +75,11 @@ function App() {
         Event Driven Synchronization
       </Typography>
 
-      <Typography variant="body2" sx={{ color: "text.secondary" }}>
-        Tab ID: {tabId}
-      </Typography>
-
+      <Card sx={{ backgroundColor: "grey.300", margin: 1, padding: 0.5 }}>
+        <Typography variant="body2" sx={{ color: "text.secondary" }}>
+          <b> Tab ID:</b> {tabId}
+        </Typography>
+      </Card>
       <TextField
         sx={{
           mt: 3,
