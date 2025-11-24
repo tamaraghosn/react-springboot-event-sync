@@ -15,12 +15,14 @@ function App() {
       sessionStorage.setItem("tabId", storedTabId);
     }
     setTabId(storedTabId);
-
+    //
     const savedText = sessionStorage.getItem("savedText") || "";
     const savedLabel = sessionStorage.getItem("savedLabel") || "";
 
     setText(savedText);
     setLabel(savedLabel);
+
+    //
 
     const interval = setInterval(() => {
       fetchLabel(storedTabId);
