@@ -104,12 +104,16 @@ function App() {
         }}
         fullWidth
         label="Type something"
+        placeholder="Enter your text here..."
+        helperText="This text will be sent to the server and synced."
         value={text}
         onChange={handleInputChange}
       />
 
       <Typography variant="h6" sx={{ mt: 4 }}>
-        Server Label: {label}
+        <b style={{ color: "teal" }}>Server Label: </b>
+        <span style={{ marginLeft: "10px" }}></span>
+        <i>{label}</i>
       </Typography>
     </Box>
   );
